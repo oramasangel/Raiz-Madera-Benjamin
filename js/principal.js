@@ -34,11 +34,11 @@
   }
 
   /* ── Filtros de galería ───────────────────── */
-  const botonesFilro = document.querySelectorAll('.filtro-btn');
+  const botonesFiltro = document.querySelectorAll('.filtro-btn');
   const tarjetasProyecto = document.querySelectorAll('.tarjeta-proyecto[data-categoria]');
   const sinResultados = document.getElementById('sinResultados');
 
-  if (botonesFilro.length > 0 && tarjetasProyecto.length > 0) {
+  if (botonesFiltro.length > 0 && tarjetasProyecto.length > 0) {
 
     // Lee el parámetro ?categoria= en la URL para preseleccionar un filtro
     const parametros = new URLSearchParams(window.location.search);
@@ -47,7 +47,7 @@
       aplicarFiltro(categoriaUrl);
     }
 
-    botonesFilro.forEach(function (boton) {
+    botonesFiltro.forEach(function (boton) {
       boton.addEventListener('click', function () {
         const filtro = boton.getAttribute('data-filtro');
         aplicarFiltro(filtro);
@@ -57,7 +57,7 @@
 
   function aplicarFiltro(filtro) {
     // Actualiza estado activo de botones
-    botonesFilro.forEach(function (boton) {
+    botonesFiltro.forEach(function (boton) {
       const esteActivo = boton.getAttribute('data-filtro') === filtro;
       boton.classList.toggle('activo', esteActivo);
       boton.setAttribute('aria-pressed', String(esteActivo));
@@ -96,13 +96,17 @@
 
       // Simula el envío del formulario (sin backend por ahora)
       const botonEnviar = formularioContacto.querySelector('[type="submit"]');
-      botonEnviar.disabled = true;
-      botonEnviar.textContent = 'Enviando…';
+      if (botonEnviar) {
+        botonEnviar.disabled = true;
+        botonEnviar.textContent = 'Enviando…';
+      }
 
       setTimeout(function () {
         formularioContacto.reset();
-        botonEnviar.disabled = false;
-        botonEnviar.textContent = 'Enviar mensaje';
+        if (botonEnviar) {
+          botonEnviar.disabled = false;
+          botonEnviar.textContent = 'Enviar mensaje';
+        }
         if (avisoEnviado) {
           avisoEnviado.style.display = 'block';
           setTimeout(function () {

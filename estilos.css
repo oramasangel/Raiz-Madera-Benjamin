@@ -79,7 +79,8 @@ ul {
 .btn-principal:hover,
 .btn-principal:focus {
   background-color: var(--color-nogal);
-  outline: none;
+  outline: 2px solid var(--color-madera);
+  outline-offset: 2px;
 }
 
 .btn-secundario {
@@ -100,7 +101,8 @@ ul {
 .btn-secundario:focus {
   background-color: var(--color-roble);
   color: var(--color-blanco);
-  outline: none;
+  outline: 2px solid var(--color-roble);
+  outline-offset: 2px;
 }
 
 .etiqueta-seccion {
