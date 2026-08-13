@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contáctanos – Raíz Madera. Solicita una cotización para tu proyecto de carpintería artesanal con Benjamin." />
+  <title>Contacto – Raíz Madera</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+
+  <!-- ══ Encabezado ══════════════════════════════════════════════ -->
+  <header class="encabezado">
+    <div class="contenedor">
+      <a href="index.html" class="logo">Raíz <span>Madera</span></a>
+
+      <nav class="nav-principal" id="navPrincipal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html" class="activo">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <button class="boton-menu" id="botonMenu" aria-expanded="false" aria-controls="navPrincipal" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ══ Cabecera de contacto ════════════════════════════════════ -->
+    <section class="contacto-header">
+      <div class="contenedor">
+        <span class="etiqueta-seccion">Hablemos</span>
+        <h1 class="titulo-seccion">Contacto</h1>
+        <p class="descripcion-seccion" style="margin-inline:auto; color:var(--color-arena); opacity:0.8;">
+          ¿Tienes un proyecto en mente? Escríbenos y te responderemos a la brevedad con una cotización personalizada.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══ Información de contacto + Formulario ═══════════════════ -->
+    <section class="contacto-contenido">
+      <div class="contenedor">
+
+        <!-- Datos de contacto -->
+        <div class="contacto-info">
+
+          <div>
+            <h2 class="contacto-info__titulo">Información de contacto</h2>
+            <p style="font-size:0.9rem; opacity:0.75; line-height:1.7;">
+              Estamos disponibles de lunes a sábado de 8:00 a.m. a 6:00 p.m. No dudes en escribirnos o llamarnos.
+            </p>
+          </div>
+
+          <div class="contacto-dato">
+            <span class="contacto-dato__icono" aria-hidden="true">📞</span>
+            <div>
+              <span class="contacto-dato__etiqueta">Teléfono / WhatsApp</span>
+              <a href="tel:+1234567890" class="contacto-dato__valor">+1 (234) 567-890</a>
+            </div>
+          </div>
+
+          <div class="contacto-dato">
+            <span class="contacto-dato__icono" aria-hidden="true">✉️</span>
+            <div>
+              <span class="contacto-dato__etiqueta">Correo electrónico</span>
+              <a href="mailto:hola@raizmadera.com" class="contacto-dato__valor">hola@raizmadera.com</a>
+            </div>
+          </div>
+
+          <div class="contacto-dato">
+            <span class="contacto-dato__icono" aria-hidden="true">📍</span>
+            <div>
+              <span class="contacto-dato__etiqueta">Taller</span>
+              <span class="contacto-dato__valor">Calle Principal 123, Col. Centro<br />Ciudad, País</span>
+            </div>
+          </div>
+
+          <div class="contacto-dato">
+            <span class="contacto-dato__icono" aria-hidden="true">🕐</span>
+            <div>
+              <span class="contacto-dato__etiqueta">Horario de atención</span>
+              <span class="contacto-dato__valor">Lunes a viernes: 8:00 – 18:00<br />Sábado: 8:00 – 13:00</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Formulario -->
+        <div class="formulario-contacto">
+          <h2 class="formulario-contacto__titulo">Envíanos un mensaje</h2>
+
+          <form id="formularioContacto" novalidate>
+
+            <div class="campo-grupo">
+              <label for="nombreCompleto">Nombre completo *</label>
+              <input type="text" id="nombreCompleto" name="nombreCompleto" placeholder="Tu nombre completo" required autocomplete="name" />
+            </div>
+
+            <div class="campo-grupo">
+              <label for="correo">Correo electrónico *</label>
+              <input type="email" id="correo" name="correo" placeholder="tu@correo.com" required autocomplete="email" />
+            </div>
+
+            <div class="campo-grupo">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="+1 234 567 890" autocomplete="tel" />
+            </div>
+
+            <div class="campo-grupo">
+              <label for="tipoProyecto">Tipo de proyecto *</label>
+              <select id="tipoProyecto" name="tipoProyecto" required>
+                <option value="" disabled selected>Selecciona una opción</option>
+                <option value="escritorio">Escritorio</option>
+                <option value="sala">Mueble de sala o comedor</option>
+                <option value="puerta">Puerta</option>
+                <option value="piso">Piso</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+
+            <div class="campo-grupo">
+              <label for="mensaje">Descripción del proyecto *</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos las dimensiones, tipo de madera preferido, colores, uso del mueble..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-principal">Enviar mensaje</button>
+
+            <div class="aviso-enviado" id="avisoEnviado" role="alert">
+              ✅ ¡Gracias! Tu mensaje fue recibido. Te contactaremos pronto.
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ Pie de página ════════════════════════════════════════════ -->
+  <footer class="pie-pagina">
+    <div class="contenedor">
+      <div class="pie-pagina__superior">
+
+        <div class="pie-columna">
+          <div class="pie-logo">Raíz <span>Madera</span></div>
+          <p class="pie-descripcion">Carpintería artesanal con alma. Diseñamos y fabricamos piezas únicas en madera para tu hogar o negocio.</p>
+        </div>
+
+        <div class="pie-columna">
+          <h4 class="pie-columna__titulo">Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="pie-columna">
+          <h4 class="pie-columna__titulo">Especialidades</h4>
+          <ul>
+            <li><a href="galeria.html?categoria=escritorios">Escritorios</a></li>
+            <li><a href="galeria.html?categoria=sala">Sala y comedor</a></li>
+            <li><a href="galeria.html?categoria=puertas">Puertas</a></li>
+            <li><a href="galeria.html?categoria=pisos">Pisos</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pie-pagina__inferior">
+        <p class="pie-derechos">© 2025 Raíz Madera – Benjamin. Todos los derechos reservados.</p>
+        <p class="pie-credito">Carpintería artesanal con pasión 🪵</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/principal.js"></script>
+</body>
+</html>

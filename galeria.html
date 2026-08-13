@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Galería de proyectos de Raíz Madera – Carpintería artesanal de Benjamin. Escritorios, sala, puertas y pisos en madera maciza." />
+  <title>Galería de Proyectos – Raíz Madera</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+
+  <!-- ══ Encabezado ══════════════════════════════════════════════ -->
+  <header class="encabezado">
+    <div class="contenedor">
+      <a href="index.html" class="logo">Raíz <span>Madera</span></a>
+
+      <nav class="nav-principal" id="navPrincipal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="galeria.html" class="activo">Galería</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <button class="boton-menu" id="botonMenu" aria-expanded="false" aria-controls="navPrincipal" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ══ Cabecera de galería ══════════════════════════════════════ -->
+    <section class="galeria-header">
+      <div class="contenedor">
+        <span class="etiqueta-seccion">Portafolio</span>
+        <h1 class="titulo-seccion">Galería de proyectos</h1>
+        <p class="descripcion-seccion" style="margin-inline:auto; color:var(--color-arena); opacity:0.8;">
+          Cada pieza es el resultado de horas de trabajo artesanal con la mejor madera. Explora nuestros trabajos y encuentra inspiración para tu próximo proyecto.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══ Filtros ══════════════════════════════════════════════════ -->
+    <div class="galeria-filtros">
+      <div class="contenedor">
+        <button class="filtro-btn activo" data-filtro="todos" aria-pressed="true">Todos</button>
+        <button class="filtro-btn" data-filtro="escritorios" aria-pressed="false">Escritorios</button>
+        <button class="filtro-btn" data-filtro="sala" aria-pressed="false">Sala y comedor</button>
+        <button class="filtro-btn" data-filtro="puertas" aria-pressed="false">Puertas</button>
+        <button class="filtro-btn" data-filtro="pisos" aria-pressed="false">Pisos</button>
+        <button class="filtro-btn" data-filtro="otros" aria-pressed="false">Otros</button>
+      </div>
+    </div>
+
+    <!-- ══ Proyectos ════════════════════════════════════════════════ -->
+    <section class="galeria-seccion">
+      <div class="contenedor">
+        <div class="galeria-grid" id="galeriaGrid">
+
+          <!-- Escritorios -->
+          <article class="tarjeta-proyecto" data-categoria="escritorios">
+            <div class="tarjeta-proyecto__imagen-wrap">
+              <img src="imagenes/proyecto-escritorio-nogal.jpg" alt="Escritorio en nogal macizo" class="tarjeta-proyecto__imagen" loading="lazy" />
+            </div>
+            <div class="tarjeta-proyecto__info">
+              <span class="tarjeta-proyecto__categoria">Escritorios</span>
+              <h2 class="tarjeta-proyecto__nombre">Escritorio en nogal</h2>
+              <p class="tarjeta-proyecto__descripcion">Escritorio de oficina en nogal macizo con cajones integrados y acabado al aceite natural.</p>
+            </div>
+          </article>
+
+          <article class="tarjeta-proyecto" data-categoria="escritorios">
+            <div class="tarjeta-proyecto__imagen-wrap">
+              <img src="imagenes/proyecto-escritorio-pino.jpg" alt="Escritorio rústico en pino" class="tarjeta-proyecto__imagen" loading="lazy" />
+            </div>
+            <div class="tarjeta-proyecto__info">
+              <span class="tarjeta-proyecto__categoria">Escritorios</span>
+              <h2 class="tarjeta-proyecto__nombre">Escritorio rústico en pino</h2>
+              <p class="tarjeta-proyecto__descripcion">Escritorio estilo rústico elaborado en pino con barniz transparente que resalta la veta natural.</p>
+            </div>
+          </article>
+
+          <article class="tarjeta-proyecto" data-categoria="escritorios">
+            <div class="tarjeta-proyecto__imagen-wrap">
+              <img src="imagenes/proyecto-escritorio-flotante.jpg" alt="Escritorio flotante en roble" class="tarjeta-proyecto__imagen" loading="lazy" />
+            </div>
+            <div class="tarjeta-proyecto__info">
+              <span class="tarjeta-proyecto__categoria">Escritorios</span>
+              <h2 class="tarjeta-proyecto__nombre">Escritorio flotante en roble</h2>
+              <p class="tarjeta-proyecto__descripcion">Escritorio de pared con repisas, en roble americano y acabado mate. Diseño minimalista.</p>
+            </div>
+          </article>
+
+          <!-- Sala y comedor -->
+          <article class="tarjeta-proyecto" data-categoria="sala">
+            <div class="tarjeta-proyecto__imagen-wrap">
+              <img src="imagenes/proyecto-mesa-roble.jpg" alt="Mesa de comedor en roble" class="tarjeta-proyecto__imagen" loading="lazy" />
+            </div>
+            <div class="tarjeta-proyecto__info">
+              <span class="tarjeta-proyecto__categoria">Sala y comedor</span>
+              <h2 class="tarjeta-proyecto__nombre">Mesa de comedor en roble</h2>
+              <p class="tarjeta-proyecto__descripcion">Mesa para 8 personas en roble europeo con patas torneadas a mano y acabado satinado.</p>
+            </div>
+          </article>
+
+          <article class="tarjeta-proyecto" data-categoria="sala">
+            <div class="tarjeta-proyecto__imagen-wrap">
+              <img src="imagenes/proyecto-aparador.jpg" alt="Aparador de sala en cedro" class="tarjeta-proyecto__imagen" loading="lazy" />
+            </div>
+            <div class="tarjeta-proyecto__info">
+              <span class="tarjeta-proyecto__categoria">Sala y comedor</span>
+              <h2 class="tarjeta-proyecto__nombre">Aparador en cedro</h2>
+              <p class="tarjeta-proyecto__descripcion">Aparador de sala con puertas talladas en madera de cedro rojo y herrajes de bronce.</p>
+            </div>
+          </article>
+
+          <article class="tarjeta-proyecto" data-categoria="sala">
+            <div class="tarjeta-proyecto__imagen-wrap">
+              <img src="imagenes/proyecto-sillas.jpg" alt="Sillas de comedor artesanales" class="tarjeta-proyecto__imagen" loading="lazy" />
+            </div>
+            <div class="tarjeta-proyecto__info">
+              <span class="tarjeta-proyecto__categoria">Sala y comedor</span>
+              <h2 class="tarjeta-proyecto__nombre">Sillas de comedor</h2>
+              <p class="tarjeta-proyecto__descripcion">Juego de 6 sillas en madera de nogal con asiento tapizado en tela de lino natural.</p>
+            </div>
+          </article>
+
+          <!-- Puertas -->
+          <article class="tarjeta-proyecto" data-categoria="puertas">
+            <div class="tarjeta-proyecto__imagen-wrap">
+              <img src="imagenes/proyecto-puerta-cedro.jpg" alt="Puerta de entrada en cedro" class="tarjeta-proyecto__imagen" loading="lazy" />
+            </div>
+            <div class="tarjeta-proyecto__info">
+              <span class="tarjeta-proyecto__categoria">Puertas</span>
+              <h2 class="tarjeta-proyecto__nombre">Puerta de entrada en cedro</h2>
+              <p class="tarjeta-proyecto__descripcion">Puerta principal con tallado decorativo en cedro rojo, tratada con aceite de teca para exteriores.</p>
+            </div>
+          </article>
+
+          <article class="tarjeta-proyecto" data-categoria="puertas">
+            <div class="tarjeta-proyecto__imagen-wrap">
+              <img src="imagenes/proyecto-puerta-interior.jpg" alt="Puertas interiores en pino" class="tarjeta-proyecto__imagen" loading="lazy" />
+            </div>
+            <div class="tarjeta-proyecto__info">
+              <span class="tarjeta-proyecto__categoria">Puertas</span>
+              <h2 class="tarjeta-proyecto__nombre">Puertas interiores en pino</h2>
+              <p class="tarjeta-proyecto__descripcion">Juego de 5 puertas interiores en pino con molduras y acabado en pintura color crema.</p>
+            </div>
+          </article>
+
+          <article class="tarjeta-proyecto" data-categoria="puertas">
+            <div class="tarjeta-proyecto__imagen-wrap">
+              <img src="imagenes/proyecto-puerta-corrediza.jpg" alt="Puerta corrediza estilo granero" class="tarjeta-proyecto__imagen" loading="lazy" />
+            </div>
+            <div class="tarjeta-proyecto__info">
+              <span class="tarjeta-proyecto__categoria">Puertas</span>
+              <h2 class="tarjeta-proyecto__nombre">Puerta corrediza estilo granero</h2>
+              <p class="tarjeta-proyecto__descripcion">Puerta deslizante tipo barn door en madera de pino envejecido con rieles de acero negro.</p>
+            </div>
+          </article>
+
+          <!-- Pisos -->
+          <article class="tarjeta-proyecto" data-categoria="pisos">
+            <div class="tarjeta-proyecto__imagen-wrap">
+              <img src="imagenes/proyecto-piso-parquet.jpg" alt="Piso de parquet en roble" class="tarjeta-proyecto__imagen" loading="lazy" />
+            </div>
+            <div class="tarjeta-proyecto__info">
+              <span class="tarjeta-proyecto__categoria">Pisos</span>
+              <h2 class="tarjeta-proyecto__nombre">Parquet en roble</h2>
+              <p class="tarjeta-proyecto__descripcion">Instalación de piso de parquet en roble europeo con patrón espiga, lijado y barnizado en sitio.</p>
+            </div>
+          </article>
+
+          <article class="tarjeta-proyecto" data-categoria="pisos">
+            <div class="tarjeta-proyecto__imagen-wrap">
+              <img src="imagenes/proyecto-piso-tablon.jpg" alt="Piso de tablón macizo en nogal" class="tarjeta-proyecto__imagen" loading="lazy" />
+            </div>
+            <div class="tarjeta-proyecto__info">
+              <span class="tarjeta-proyecto__categoria">Pisos</span>
+              <h2 class="tarjeta-proyecto__nombre">Tablón macizo en nogal</h2>
+              <p class="tarjeta-proyecto__descripcion">Piso de tablones anchos en nogal americano, instalación flotante y acabado al aceite duro.</p>
+            </div>
+          </article>
+
+          <!-- Otros -->
+          <article class="tarjeta-proyecto" data-categoria="otros">
+            <div class="tarjeta-proyecto__imagen-wrap">
+              <img src="imagenes/proyecto-biblioteca.jpg" alt="Biblioteca empotrada en roble" class="tarjeta-proyecto__imagen" loading="lazy" />
+            </div>
+            <div class="tarjeta-proyecto__info">
+              <span class="tarjeta-proyecto__categoria">Otros</span>
+              <h2 class="tarjeta-proyecto__nombre">Biblioteca empotrada</h2>
+              <p class="tarjeta-proyecto__descripcion">Biblioteca a medida con escalera corrediza, fabricada en roble y pintada en color blanco roto.</p>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="sin-resultados" id="sinResultados" style="display:none; text-align:center; padding:3rem 0; color:var(--color-roble); font-family:var(--fuente-titulo); font-size:1.2rem;">
+          No hay proyectos en esta categoría aún.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══ Banner de contacto ═══════════════════════════════════════ -->
+    <section class="contacto-banner">
+      <div class="contenedor">
+        <span class="etiqueta-seccion">Tu turno</span>
+        <h2 class="titulo-seccion">¿Te gustó algún trabajo?</h2>
+        <p class="descripcion-seccion">Podemos hacerlo a tu medida. Cuéntanos tu proyecto y te enviamos una cotización.</p>
+        <a href="contacto.html" class="btn-principal">Solicitar cotización</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ Pie de página ════════════════════════════════════════════ -->
+  <footer class="pie-pagina">
+    <div class="contenedor">
+      <div class="pie-pagina__superior">
+
+        <div class="pie-columna">
+          <div class="pie-logo">Raíz <span>Madera</span></div>
+          <p class="pie-descripcion">Carpintería artesanal con alma. Diseñamos y fabricamos piezas únicas en madera para tu hogar o negocio.</p>
+        </div>
+
+        <div class="pie-columna">
+          <h4 class="pie-columna__titulo">Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="pie-columna">
+          <h4 class="pie-columna__titulo">Especialidades</h4>
+          <ul>
+            <li><a href="galeria.html?categoria=escritorios">Escritorios</a></li>
+            <li><a href="galeria.html?categoria=sala">Sala y comedor</a></li>
+            <li><a href="galeria.html?categoria=puertas">Puertas</a></li>
+            <li><a href="galeria.html?categoria=pisos">Pisos</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pie-pagina__inferior">
+        <p class="pie-derechos">© 2025 Raíz Madera – Benjamin. Todos los derechos reservados.</p>
+        <p class="pie-credito">Carpintería artesanal con pasión 🪵</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/principal.js"></script>
+</body>
+</html>
