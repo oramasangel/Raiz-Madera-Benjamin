@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Nosotros – Raíz Madera. Conoce la historia de Benjamin y su taller de carpintería artesanal." />
+  <title>Nosotros – Raíz Madera</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+
+  <!-- ══ Encabezado ══════════════════════════════════════════════ -->
+  <header class="encabezado">
+    <div class="contenedor">
+      <a href="index.html" class="logo">Raíz <span>Madera</span></a>
+
+      <nav class="nav-principal" id="navPrincipal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="nosotros.html" class="activo">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <button class="boton-menu" id="botonMenu" aria-expanded="false" aria-controls="navPrincipal" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ══ Cabecera ════════════════════════════════════════════════ -->
+    <section class="galeria-header">
+      <div class="contenedor">
+        <span class="etiqueta-seccion">Mi historia</span>
+        <h1 class="titulo-seccion">Sobre Benjamin y Raíz Madera</h1>
+        <p class="descripcion-seccion" style="margin-inline:auto; color:var(--color-arena); opacity:0.8;">
+          Una carpintería familiar que convierte la madera en arte funcional desde hace más de 15 años.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══ Historia principal ══════════════════════════════════════ -->
+    <section class="nosotros" style="padding-block:5rem;">
+      <div class="contenedor">
+        <div class="nosotros__imagen-wrap">
+          <img
+            src="imagenes/taller-benjamin.jpg"
+            alt="Benjamin trabajando en el taller"
+            class="nosotros__imagen"
+            loading="lazy"
+          />
+          <div class="nosotros__insignia">
+            <strong>+15</strong>
+            <span>años de experiencia</span>
+          </div>
+        </div>
+
+        <div class="nosotros__texto">
+          <span class="etiqueta-seccion">Quién soy</span>
+          <h2 class="titulo-seccion">Hola, soy Benjamin</h2>
+          <p class="nosotros__parrafo">
+            Desde pequeño crecí entre el olor a madera y el sonido de los cepillos en el taller de mi abuelo. Ese ambiente me marcó para siempre. A los 18 años comencé mi formación formal como carpintero, y a los 25 abrí mi propio taller: <strong>Raíz Madera</strong>.
+          </p>
+          <p class="nosotros__parrafo">
+            Mi filosofía es simple: la madera tiene vida propia, y mi trabajo es escucharla para sacar lo mejor de ella. Cada veta, cada nudo, cada color tiene una historia que merece ser contada en el mueble final.
+          </p>
+          <p class="nosotros__parrafo">
+            Trabajo principalmente con nogal, roble, cedro y pino, seleccionando personalmente cada tabla para garantizar la calidad. No uso aglomerados ni materiales de baja resistencia: aquí todo es madera maciza.
+          </p>
+          <a href="contacto.html" class="btn-principal">Iniciar un proyecto</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ Valores ══════════════════════════════════════════════════ -->
+    <section style="background-color:var(--color-blanco); padding-block:5rem;">
+      <div class="contenedor">
+        <header style="text-align:center; margin-bottom:3rem;">
+          <span class="etiqueta-seccion">Lo que nos mueve</span>
+          <h2 class="titulo-seccion">Nuestros valores</h2>
+        </header>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:2rem;">
+
+          <div style="text-align:center; padding:2rem 1.5rem; background:var(--color-crema); border-radius:var(--radio);">
+            <span style="font-size:2.5rem; display:block; margin-bottom:1rem;">🌳</span>
+            <h3 style="font-family:var(--fuente-titulo); color:var(--color-nogal); margin-bottom:0.5rem;">Sustentabilidad</h3>
+            <p style="font-size:0.875rem; opacity:0.8; line-height:1.6;">Compramos madera certificada y promovemos el uso responsable del recurso forestal.</p>
+          </div>
+
+          <div style="text-align:center; padding:2rem 1.5rem; background:var(--color-crema); border-radius:var(--radio);">
+            <span style="font-size:2.5rem; display:block; margin-bottom:1rem;">🎯</span>
+            <h3 style="font-family:var(--fuente-titulo); color:var(--color-nogal); margin-bottom:0.5rem;">Precisión</h3>
+            <p style="font-size:0.875rem; opacity:0.8; line-height:1.6;">Cada corte, ensamble y acabado es revisado con detalle para garantizar perfección.</p>
+          </div>
+
+          <div style="text-align:center; padding:2rem 1.5rem; background:var(--color-crema); border-radius:var(--radio);">
+            <span style="font-size:2.5rem; display:block; margin-bottom:1rem;">🤝</span>
+            <h3 style="font-family:var(--fuente-titulo); color:var(--color-nogal); margin-bottom:0.5rem;">Compromiso</h3>
+            <p style="font-size:0.875rem; opacity:0.8; line-height:1.6;">Cumplimos plazos y mantenemos comunicación constante durante todo el proceso.</p>
+          </div>
+
+          <div style="text-align:center; padding:2rem 1.5rem; background:var(--color-crema); border-radius:var(--radio);">
+            <span style="font-size:2.5rem; display:block; margin-bottom:1rem;">✨</span>
+            <h3 style="font-family:var(--fuente-titulo); color:var(--color-nogal); margin-bottom:0.5rem;">Originalidad</h3>
+            <p style="font-size:0.875rem; opacity:0.8; line-height:1.6;">No repetimos diseños. Cada pieza es única y pensada exclusivamente para el cliente.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ Proceso de trabajo ══════════════════════════════════════ -->
+    <section class="proceso">
+      <div class="contenedor">
+        <header class="proceso__encabezado">
+          <span class="etiqueta-seccion">Cómo trabajamos</span>
+          <h2 class="titulo-seccion">Del árbol a tu hogar</h2>
+          <p class="descripcion-seccion">Seguimos un proceso cuidadoso para garantizar que cada pieza supere tus expectativas.</p>
+        </header>
+
+        <div class="proceso__pasos">
+
+          <div class="paso">
+            <div class="paso__numero">01</div>
+            <h3 class="paso__titulo">Consulta inicial</h3>
+            <p class="paso__descripcion">Conversamos sobre tu proyecto, medidas y tipo de madera que mejor se adapta a tus necesidades.</p>
+          </div>
+
+          <div class="paso">
+            <div class="paso__numero">02</div>
+            <h3 class="paso__titulo">Diseño y planos</h3>
+            <p class="paso__descripcion">Elaboramos bocetos y planos detallados para que puedas visualizar el resultado antes de empezar.</p>
+          </div>
+
+          <div class="paso">
+            <div class="paso__numero">03</div>
+            <h3 class="paso__titulo">Selección de madera</h3>
+            <p class="paso__descripcion">Elegimos la madera adecuada según el proyecto: resistencia, veta y color se toman en cuenta.</p>
+          </div>
+
+          <div class="paso">
+            <div class="paso__numero">04</div>
+            <h3 class="paso__titulo">Fabricación</h3>
+            <p class="paso__descripcion">Tallamos, ensamblamos y damos acabados con técnicas artesanales que garantizan calidad.</p>
+          </div>
+
+          <div class="paso">
+            <div class="paso__numero">05</div>
+            <h3 class="paso__titulo">Entrega e instalación</h3>
+            <p class="paso__descripcion">Entregamos e instalamos cada pieza en tu espacio, asegurando un resultado impecable.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ Banner de contacto ═══════════════════════════════════════ -->
+    <section class="contacto-banner">
+      <div class="contenedor">
+        <span class="etiqueta-seccion">¿Empezamos?</span>
+        <h2 class="titulo-seccion">Hablemos de tu proyecto</h2>
+        <p class="descripcion-seccion">Cuéntame tu idea y te doy una cotización sin compromiso.</p>
+        <a href="contacto.html" class="btn-principal">Escribirme</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ Pie de página ════════════════════════════════════════════ -->
+  <footer class="pie-pagina">
+    <div class="contenedor">
+      <div class="pie-pagina__superior">
+
+        <div class="pie-columna">
+          <div class="pie-logo">Raíz <span>Madera</span></div>
+          <p class="pie-descripcion">Carpintería artesanal con alma. Diseñamos y fabricamos piezas únicas en madera para tu hogar o negocio.</p>
+        </div>
+
+        <div class="pie-columna">
+          <h4 class="pie-columna__titulo">Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="pie-columna">
+          <h4 class="pie-columna__titulo">Especialidades</h4>
+          <ul>
+            <li><a href="galeria.html?categoria=escritorios">Escritorios</a></li>
+            <li><a href="galeria.html?categoria=sala">Sala y comedor</a></li>
+            <li><a href="galeria.html?categoria=puertas">Puertas</a></li>
+            <li><a href="galeria.html?categoria=pisos">Pisos</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pie-pagina__inferior">
+        <p class="pie-derechos">© 2025 Raíz Madera – Benjamin. Todos los derechos reservados.</p>
+        <p class="pie-credito">Carpintería artesanal con pasión 🪵</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/principal.js"></script>
+</body>
+</html>

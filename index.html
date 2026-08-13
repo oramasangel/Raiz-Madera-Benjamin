@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Raíz Madera – Carpintería artesanal de Benjamin. Muebles, escritorios, puertas, pisos y más. Trabajos a medida con madera de calidad." />
+  <title>Raíz Madera – Benjamin | Carpintería Artesanal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+
+  <!-- ══ Encabezado ══════════════════════════════════════════════ -->
+  <header class="encabezado">
+    <div class="contenedor">
+      <a href="index.html" class="logo">Raíz <span>Madera</span></a>
+
+      <nav class="nav-principal" id="navPrincipal" aria-label="Navegación principal">
+        <ul>
+          <li><a href="index.html" class="activo">Inicio</a></li>
+          <li><a href="galeria.html">Galería</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <button class="boton-menu" id="botonMenu" aria-expanded="false" aria-controls="navPrincipal" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ══ Hero ════════════════════════════════════════════════════ -->
+    <section class="hero">
+      <div class="contenedor">
+        <div class="hero__contenido">
+          <span class="hero__etiqueta">Carpintería artesanal · Desde 2010</span>
+          <h1 class="hero__titulo">
+            Madera que cuenta<br /><em>tu historia</em>
+          </h1>
+          <p class="hero__descripcion">
+            Diseñamos y fabricamos piezas únicas en madera maciza: escritorios, muebles de sala, puertas y pisos. Cada obra refleja el cuidado y la pasión de nuestro taller.
+          </p>
+          <div class="hero__acciones">
+            <a href="galeria.html" class="btn-principal">Ver galería</a>
+            <a href="contacto.html" class="btn-secundario" style="color:var(--color-arena);border-color:var(--color-arena);">Solicitar cotización</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ Franja de valores ════════════════════════════════════════ -->
+    <section class="franja-valores" aria-label="Nuestros valores">
+      <div class="contenedor">
+
+        <div class="valor-item">
+          <span class="valor-item__icono" aria-hidden="true">🪵</span>
+          <strong class="valor-item__titulo">Madera natural</strong>
+          <p class="valor-item__texto">Utilizamos madera certificada y sostenible</p>
+        </div>
+
+        <div class="valor-item">
+          <span class="valor-item__icono" aria-hidden="true">✋</span>
+          <strong class="valor-item__titulo">Trabajo artesanal</strong>
+          <p class="valor-item__texto">Cada pieza es elaborada a mano en nuestro taller</p>
+        </div>
+
+        <div class="valor-item">
+          <span class="valor-item__icono" aria-hidden="true">📐</span>
+          <strong class="valor-item__titulo">A medida</strong>
+          <p class="valor-item__texto">Diseñamos según tus dimensiones y necesidades</p>
+        </div>
+
+        <div class="valor-item">
+          <span class="valor-item__icono" aria-hidden="true">🛡️</span>
+          <strong class="valor-item__titulo">Garantía</strong>
+          <p class="valor-item__texto">Respaldamos la durabilidad de nuestros productos</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══ Categorías ═══════════════════════════════════════════════ -->
+    <section class="categorias" id="categorias">
+      <div class="contenedor">
+        <header class="categorias__encabezado">
+          <span class="etiqueta-seccion">Lo que hacemos</span>
+          <h2 class="titulo-seccion">Nuestras especialidades</h2>
+          <p class="descripcion-seccion">Desde escritorios hasta instalaciones de pisos, cada proyecto es único y lleva el sello de la madera auténtica.</p>
+        </header>
+
+        <div class="categorias__grid">
+
+          <a href="galeria.html?categoria=escritorios" class="tarjeta-categoria" aria-label="Ver escritorios">
+            <img
+              src="imagenes/categoria-escritorios.jpg"
+              alt="Escritorio de madera maciza"
+              class="tarjeta-categoria__imagen"
+              loading="lazy"
+            />
+            <div class="tarjeta-categoria__capa">
+              <h3 class="tarjeta-categoria__nombre">Escritorios</h3>
+              <span class="tarjeta-categoria__cantidad">Diseños personalizados</span>
+            </div>
+          </a>
+
+          <a href="galeria.html?categoria=sala" class="tarjeta-categoria" aria-label="Ver muebles de sala">
+            <img
+              src="imagenes/categoria-sala.jpg"
+              alt="Muebles de sala en madera"
+              class="tarjeta-categoria__imagen"
+              loading="lazy"
+            />
+            <div class="tarjeta-categoria__capa">
+              <h3 class="tarjeta-categoria__nombre">Sala y comedor</h3>
+              <span class="tarjeta-categoria__cantidad">Mesas, sillas y más</span>
+            </div>
+          </a>
+
+          <a href="galeria.html?categoria=puertas" class="tarjeta-categoria" aria-label="Ver puertas">
+            <img
+              src="imagenes/categoria-puertas.jpg"
+              alt="Puerta de madera tallada"
+              class="tarjeta-categoria__imagen"
+              loading="lazy"
+            />
+            <div class="tarjeta-categoria__capa">
+              <h3 class="tarjeta-categoria__nombre">Puertas</h3>
+              <span class="tarjeta-categoria__cantidad">Interiores y exteriores</span>
+            </div>
+          </a>
+
+          <a href="galeria.html?categoria=pisos" class="tarjeta-categoria" aria-label="Ver pisos">
+            <img
+              src="imagenes/categoria-pisos.jpg"
+              alt="Piso de madera instalado"
+              class="tarjeta-categoria__imagen"
+              loading="lazy"
+            />
+            <div class="tarjeta-categoria__capa">
+              <h3 class="tarjeta-categoria__nombre">Pisos</h3>
+              <span class="tarjeta-categoria__cantidad">Instalación y acabados</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ Trabajos destacados ══════════════════════════════════════ -->
+    <section class="destacados" id="destacados">
+      <div class="contenedor">
+        <header class="destacados__encabezado">
+          <div>
+            <span class="etiqueta-seccion">Portafolio</span>
+            <h2 class="titulo-seccion">Trabajos recientes</h2>
+          </div>
+          <a href="galeria.html" class="btn-secundario">Ver todos</a>
+        </header>
+
+        <div class="galeria-grid" id="trabajosDestacados">
+
+          <article class="tarjeta-proyecto">
+            <div class="tarjeta-proyecto__imagen-wrap">
+              <img src="imagenes/proyecto-escritorio-nogal.jpg" alt="Escritorio en nogal" class="tarjeta-proyecto__imagen" loading="lazy" />
+            </div>
+            <div class="tarjeta-proyecto__info">
+              <span class="tarjeta-proyecto__categoria">Escritorios</span>
+              <h3 class="tarjeta-proyecto__nombre">Escritorio en nogal</h3>
+              <p class="tarjeta-proyecto__descripcion">Escritorio de oficina en madera de nogal macizo con cajones integrados y acabado al aceite.</p>
+            </div>
+          </article>
+
+          <article class="tarjeta-proyecto">
+            <div class="tarjeta-proyecto__imagen-wrap">
+              <img src="imagenes/proyecto-mesa-roble.jpg" alt="Mesa de comedor en roble" class="tarjeta-proyecto__imagen" loading="lazy" />
+            </div>
+            <div class="tarjeta-proyecto__info">
+              <span class="tarjeta-proyecto__categoria">Sala y comedor</span>
+              <h3 class="tarjeta-proyecto__nombre">Mesa de comedor en roble</h3>
+              <p class="tarjeta-proyecto__descripcion">Mesa para 8 personas elaborada en roble europeo, con patas torneadas y acabado mate.</p>
+            </div>
+          </article>
+
+          <article class="tarjeta-proyecto">
+            <div class="tarjeta-proyecto__imagen-wrap">
+              <img src="imagenes/proyecto-puerta-cedro.jpg" alt="Puerta de entrada en cedro" class="tarjeta-proyecto__imagen" loading="lazy" />
+            </div>
+            <div class="tarjeta-proyecto__info">
+              <span class="tarjeta-proyecto__categoria">Puertas</span>
+              <h3 class="tarjeta-proyecto__nombre">Puerta de entrada en cedro</h3>
+              <p class="tarjeta-proyecto__descripcion">Puerta principal con tallado decorativo en cedro rojo, tratada para exteriores.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ Quiénes somos (resumen) ══════════════════════════════════ -->
+    <section class="nosotros" id="nosotros">
+      <div class="contenedor">
+        <div class="nosotros__imagen-wrap">
+          <img
+            src="imagenes/taller-benjamin.jpg"
+            alt="Benjamin trabajando en su taller de carpintería"
+            class="nosotros__imagen"
+            loading="lazy"
+          />
+          <div class="nosotros__insignia">
+            <strong>+15</strong>
+            <span>años de experiencia</span>
+          </div>
+        </div>
+
+        <div class="nosotros__texto">
+          <span class="etiqueta-seccion">Nuestra historia</span>
+          <h2 class="titulo-seccion">Pasión por la madera desde el primer corte</h2>
+          <p class="nosotros__parrafo">
+            Soy Benjamin, carpintero artesanal con más de 15 años transformando madera en piezas que duran generaciones. Aprendí el oficio de mi abuelo y cada trabajo lleva esa herencia de cuidado y dedicación.
+          </p>
+          <p class="nosotros__parrafo">
+            Trabajo con maderas seleccionadas — nogal, roble, cedro y pino — usando técnicas tradicionales combinadas con herramientas modernas para lograr acabados precisos y duraderos.
+          </p>
+          <a href="nosotros.html" class="btn-principal">Conocer más</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ Proceso de trabajo ═══════════════════════════════════════ -->
+    <section class="proceso" id="proceso">
+      <div class="contenedor">
+        <header class="proceso__encabezado">
+          <span class="etiqueta-seccion">Cómo trabajamos</span>
+          <h2 class="titulo-seccion">Del árbol a tu hogar</h2>
+          <p class="descripcion-seccion">Seguimos un proceso cuidadoso para garantizar que cada pieza supere tus expectativas.</p>
+        </header>
+
+        <div class="proceso__pasos">
+
+          <div class="paso">
+            <div class="paso__numero">01</div>
+            <h3 class="paso__titulo">Consulta inicial</h3>
+            <p class="paso__descripcion">Conversamos sobre tu proyecto, medidas y tipo de madera que mejor se adapta a tus necesidades.</p>
+          </div>
+
+          <div class="paso">
+            <div class="paso__numero">02</div>
+            <h3 class="paso__titulo">Diseño y planos</h3>
+            <p class="paso__descripcion">Elaboramos bocetos y planos detallados para que puedas visualizar el resultado antes de empezar.</p>
+          </div>
+
+          <div class="paso">
+            <div class="paso__numero">03</div>
+            <h3 class="paso__titulo">Selección de madera</h3>
+            <p class="paso__descripcion">Elegimos la madera adecuada según el proyecto: resistencia, veta y color se toman en cuenta.</p>
+          </div>
+
+          <div class="paso">
+            <div class="paso__numero">04</div>
+            <h3 class="paso__titulo">Fabricación</h3>
+            <p class="paso__descripcion">Tallamos, ensamblamos y damos acabados con técnicas artesanales que garantizan calidad.</p>
+          </div>
+
+          <div class="paso">
+            <div class="paso__numero">05</div>
+            <h3 class="paso__titulo">Entrega e instalación</h3>
+            <p class="paso__descripcion">Entregamos e instalamos cada pieza en tu espacio, asegurando un resultado impecable.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ Banner de contacto ═══════════════════════════════════════ -->
+    <section class="contacto-banner">
+      <div class="contenedor">
+        <span class="etiqueta-seccion">Hagámoslo realidad</span>
+        <h2 class="titulo-seccion">¿Tienes un proyecto en mente?</h2>
+        <p class="descripcion-seccion">Cuéntanos tu idea y te damos una cotización sin compromiso. Trabajamos en todo el país.</p>
+        <a href="contacto.html" class="btn-principal">Escribirnos</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ Pie de página ═══════════════════════════════════════════════ -->
+  <footer class="pie-pagina">
+    <div class="contenedor">
+      <div class="pie-pagina__superior">
+
+        <div class="pie-columna">
+          <div class="pie-logo">Raíz <span>Madera</span></div>
+          <p class="pie-descripcion">Carpintería artesanal con alma. Diseñamos y fabricamos piezas únicas en madera para tu hogar o negocio.</p>
+        </div>
+
+        <div class="pie-columna">
+          <h4 class="pie-columna__titulo">Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="galeria.html">Galería</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="pie-columna">
+          <h4 class="pie-columna__titulo">Especialidades</h4>
+          <ul>
+            <li><a href="galeria.html?categoria=escritorios">Escritorios</a></li>
+            <li><a href="galeria.html?categoria=sala">Sala y comedor</a></li>
+            <li><a href="galeria.html?categoria=puertas">Puertas</a></li>
+            <li><a href="galeria.html?categoria=pisos">Pisos</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pie-pagina__inferior">
+        <p class="pie-derechos">© 2025 Raíz Madera – Benjamin. Todos los derechos reservados.</p>
+        <p class="pie-credito">Carpintería artesanal con pasión 🪵</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/principal.js"></script>
+</body>
+</html>
