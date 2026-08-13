@@ -3,16 +3,19 @@
 Coloca aquí las imágenes del portafolio. Se esperan los siguientes archivos:
 
 ## Imágenes principales
+
 - `hero-madera.jpg` — Fondo de la sección principal (imagen de madera o taller)
 - `taller-benjamin.jpg` — Foto de Benjamin trabajando en el taller
 
 ## Categorías
+
 - `categoria-escritorios.jpg`
 - `categoria-sala.jpg`
 - `categoria-puertas.jpg`
 - `categoria-pisos.jpg`
 
 ## Proyectos
+
 - `proyecto-escritorio-nogal.jpg`
 - `proyecto-escritorio-pino.jpg`
 - `proyecto-escritorio-flotante.jpg`
@@ -27,6 +30,7 @@ Coloca aquí las imágenes del portafolio. Se esperan los siguientes archivos:
 - `proyecto-biblioteca.jpg`
 
 ## Tamaños recomendados
+
 - Hero: 1920 × 1080 px
 - Categorías: 800 × 600 px (proporción 4:3)
 - Proyectos: 800 × 600 px (proporción 4:3)
