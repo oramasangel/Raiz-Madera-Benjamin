@@ -218,7 +218,7 @@
 
                         <article class="tarjeta-proyecto" data-categoria="otros">
                             <div class="tarjeta-proyecto__imagen-wrap">
-                                <img src="imagenes/panel-bienvenida-boda.jpg" alt="Kiosco para eventos" class="tarjeta-proyecto__imagen" loading="lazy" />
+                                <img src="imagenes/panel-bienvenida-boda.jpg" alt="Panel bienvenida bodas" class="tarjeta-proyecto__imagen" loading="lazy" />
                             </div>
                             <div class="tarjeta-proyecto__info">
                                 <span class="tarjeta-proyecto__categoria">Otros</span>
@@ -231,11 +231,55 @@
 
                         <article class="tarjeta-proyecto" data-categoria="otros">
                             <div class="tarjeta-proyecto__imagen-wrap">
-                                <img src="imagenes/stand-decoracion.jpeg" alt="Kiosco para eventos" class="tarjeta-proyecto__imagen" loading="lazy" />
+                                <img src="imagenes/stand-decoracion.jpeg" alt="Stand de Decoracion" class="tarjeta-proyecto__imagen" loading="lazy" />
                             </div>
                             <div class="tarjeta-proyecto__info">
                                 <span class="tarjeta-proyecto__categoria">Otros</span>
                                 <h2 class="tarjeta-proyecto__nombre">Panel con estantes para decoracion</h2>
+                                <p class="tarjeta-proyecto__descripcion">Proxima descripcion</p>
+                            </div>
+                        </article>
+
+                        <article class="tarjeta-proyecto" data-categoria="otros">
+                            <div class="tarjeta-proyecto__imagen-wrap">
+                                <div class="mini-carrusel" aria-label="Proceso del proyecto">
+                                    <div class="mini-carrusel__track">
+                                        <img
+                                            src="imagenes/stand-conferencia.jpg"
+                                            alt="Base de stand de conferencia"
+                                            class="tarjeta-proyecto__imagen mini-carrusel__slide activo"
+                                            loading="lazy"
+                                        />
+                                        <img src="imagenes/stand-conferencia-2.jpg" alt="Stand detallado" class="tarjeta-proyecto__imagen mini-carrusel__slide" loading="lazy" />
+                                        <img src="imagenes/stand-conferencia-3.jpg" alt="Stando completo" class="tarjeta-proyecto__imagen mini-carrusel__slide" loading="lazy" />
+                                        <img src="imagenes/stand-conferencia-4.jpg" alt="Stando completo" class="tarjeta-proyecto__imagen mini-carrusel__slide" loading="lazy" />
+                                        <img
+                                            src="imagenes/stand-conferencia-final.jpg"
+                                            alt="Stando completo terminado"
+                                            class="tarjeta-proyecto__imagen mini-carrusel__slide"
+                                            loading="lazy"
+                                        />
+                                    </div>
+
+                                    <button class="mini-carrusel__control mini-carrusel__control--prev" type="button" aria-label="Imagen anterior">‹</button>
+                                    <button class="mini-carrusel__control mini-carrusel__control--next" type="button" aria-label="Imagen siguiente">›</button>
+                                    <div class="mini-carrusel__dots" aria-label="Indicadores del carrusel"></div>
+                                </div>
+                            </div>
+                            <div class="tarjeta-proyecto__info">
+                                <span class="tarjeta-proyecto__categoria">Otros</span>
+                                <h2 class="tarjeta-proyecto__nombre">Stand de conferencia</h2>
+                                <p class="tarjeta-proyecto__descripcion">Proxima descripcion</p>
+                            </div>
+                        </article>
+
+                        <article class="tarjeta-proyecto" data-categoria="otros">
+                            <div class="tarjeta-proyecto__imagen-wrap">
+                                <img src="imagenes/panel-decorativo.jpg" alt="Panel Decorativo" class="tarjeta-proyecto__imagen" loading="lazy" />
+                            </div>
+                            <div class="tarjeta-proyecto__info">
+                                <span class="tarjeta-proyecto__categoria">Otros</span>
+                                <h2 class="tarjeta-proyecto__nombre">Panel decorativo</h2>
                                 <p class="tarjeta-proyecto__descripcion">Proxima descripcion</p>
                             </div>
                         </article>
@@ -298,6 +342,10 @@
                 </div>
             </div>
         </footer>
+
+        <div id="visorTarjeta" class="visor-tarjeta" aria-hidden="true">
+            <img id="visorTarjetaImg" class="visor-tarjeta__img" alt="" />
+        </div>
 
         <script src="js/principal.js"></script>
     </body>
