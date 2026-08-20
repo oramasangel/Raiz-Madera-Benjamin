@@ -112,6 +112,11 @@
                 });
             }
 
+            carrusel._syncToIndex = function (nuevoIndice) {
+                indice = (nuevoIndice + slides.length) % slides.length;
+                render();
+            };
+
             slides.forEach(function (_, i) {
                 const dot = document.createElement("button");
                 dot.type = "button";
@@ -151,24 +156,51 @@
         const tarjetas = document.querySelectorAll(".tarjeta-proyecto");
         const visor = document.getElementById("visorTarjeta");
         const visorImg = document.getElementById("visorTarjetaImg");
+        const prevBtnVisor = document.querySelector(".visor-tarjeta__control--prev");
+        const nextBtnVisor = document.querySelector(".visor-tarjeta__control--next");
 
         if (!tarjetas.length || !visor || !visorImg) {
             return;
         }
 
         let tarjetaActiva = null;
+        let indiceActual = 0;
 
-        function obtenerImagenTarjeta(tarjeta) {
-            const slideActiva = tarjeta.querySelector(".mini-carrusel__slide.activo");
-            if (slideActiva) {
-                return slideActiva;
+        function obtenerListaImagenes(tarjeta) {
+            const slides = tarjeta.querySelectorAll(".mini-carrusel__slide");
+            if (slides.length > 0) {
+                return Array.from(slides);
             }
-            return tarjeta.querySelector(".tarjeta-proyecto__imagen");
+
+            const imagen = tarjeta.querySelector(".tarjeta-proyecto__imagen");
+            return imagen ? [imagen] : [];
+        }
+
+        function sincronizarMiniCarrusel(tarjeta, nuevoIndice) {
+            const miniCarrusel = tarjeta.querySelector(".mini-carrusel");
+            if (miniCarrusel && typeof miniCarrusel._syncToIndex === "function") {
+                miniCarrusel._syncToIndex(nuevoIndice);
+            }
+        }
+
+        function actualizarVisor(tarjeta, nuevoIndice) {
+            const imagenes = obtenerListaImagenes(tarjeta);
+            if (!imagenes.length) {
+                return;
+            }
+
+            indiceActual = (nuevoIndice + imagenes.length) % imagenes.length;
+            const imagen = imagenes[indiceActual];
+
+            visorImg.src = imagen.currentSrc || imagen.src;
+            visorImg.alt = imagen.alt || "Imagen ampliada del proyecto";
+
+            sincronizarMiniCarrusel(tarjeta, indiceActual);
         }
 
         function abrirVisor(tarjeta) {
-            const imagen = obtenerImagenTarjeta(tarjeta);
-            if (!imagen) {
+            const imagenes = obtenerListaImagenes(tarjeta);
+            if (!imagenes.length) {
                 return;
             }
 
@@ -178,10 +210,14 @@
 
             tarjetaActiva = tarjeta;
             tarjetaActiva.classList.add("tarjeta-proyecto--activa");
+            indiceActual = 0;
 
-            visorImg.src = imagen.currentSrc || imagen.src;
-            visorImg.alt = imagen.alt || "Imagen ampliada del proyecto";
+            if (tarjeta.querySelector(".mini-carrusel__slide.activo")) {
+                const slides = Array.from(tarjeta.querySelectorAll(".mini-carrusel__slide"));
+                indiceActual = slides.indexOf(tarjeta.querySelector(".mini-carrusel__slide.activo"));
+            }
 
+            actualizarVisor(tarjeta, indiceActual);
             visor.classList.add("activo");
             visor.setAttribute("aria-hidden", "false");
             document.body.classList.add("visor-abierto");
@@ -196,6 +232,26 @@
             visor.classList.remove("activo");
             visor.setAttribute("aria-hidden", "true");
             document.body.classList.remove("visor-abierto");
+        }
+
+        if (prevBtnVisor) {
+            prevBtnVisor.addEventListener("click", function (evento) {
+                evento.stopPropagation();
+                if (!tarjetaActiva) return;
+                const imagenes = obtenerListaImagenes(tarjetaActiva);
+                if (imagenes.length <= 1) return;
+                actualizarVisor(tarjetaActiva, indiceActual - 1);
+            });
+        }
+
+        if (nextBtnVisor) {
+            nextBtnVisor.addEventListener("click", function (evento) {
+                evento.stopPropagation();
+                if (!tarjetaActiva) return;
+                const imagenes = obtenerListaImagenes(tarjetaActiva);
+                if (imagenes.length <= 1) return;
+                actualizarVisor(tarjetaActiva, indiceActual + 1);
+            });
         }
 
         tarjetas.forEach(function (tarjeta) {
@@ -213,13 +269,31 @@
             });
         });
 
-        visor.addEventListener("click", function () {
-            cerrarVisor();
+        visor.addEventListener("click", function (evento) {
+            if (evento.target === visor || evento.target === visorImg) {
+                cerrarVisor();
+            }
         });
 
         document.addEventListener("keydown", function (evento) {
-            if (evento.key === "Escape" && visor.classList.contains("activo")) {
+            if (!visor.classList.contains("activo") || !tarjetaActiva) {
+                return;
+            }
+
+            if (evento.key === "Escape") {
                 cerrarVisor();
+                return;
+            }
+
+            if (evento.key === "ArrowLeft") {
+                const imagenes = obtenerListaImagenes(tarjetaActiva);
+                if (imagenes.length > 1) actualizarVisor(tarjetaActiva, indiceActual - 1);
+                return;
+            }
+
+            if (evento.key === "ArrowRight") {
+                const imagenes = obtenerListaImagenes(tarjetaActiva);
+                if (imagenes.length > 1) actualizarVisor(tarjetaActiva, indiceActual + 1);
             }
         });
     }

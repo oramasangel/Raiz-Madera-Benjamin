@@ -568,6 +568,53 @@
                                 <p class="tarjeta-proyecto__descripcion">Proxima descripcion</p>
                             </div>
                         </article>
+
+                        <article class="tarjeta-proyecto" data-categoria="otros">
+                            <div class="tarjeta-proyecto__imagen-wrap">
+                                <img src="imagenes/mesa-exibidor.jpg" alt="Mesa exibidor" class="tarjeta-proyecto__imagen" loading="lazy" />
+                            </div>
+                            <div class="tarjeta-proyecto__info">
+                                <span class="tarjeta-proyecto__categoria">Otros</span>
+                                <h2 class="tarjeta-proyecto__nombre">Mesa exibidora de cristal</h2>
+                                <p class="tarjeta-proyecto__descripcion">Proxima descripcion</p>
+                            </div>
+                        </article>
+
+                        <article class="tarjeta-proyecto" data-categoria="otros">
+                            <div class="tarjeta-proyecto__imagen-wrap">
+                                <img src="imagenes/adorno-estructural.jpg" alt="Adorno extructural" class="tarjeta-proyecto__imagen" loading="lazy" />
+                            </div>
+                            <div class="tarjeta-proyecto__info">
+                                <span class="tarjeta-proyecto__categoria">Otros</span>
+                                <h2 class="tarjeta-proyecto__nombre">Estructura adornativa</h2>
+                                <p class="tarjeta-proyecto__descripcion">Proxima descripcion</p>
+                            </div>
+                        </article>
+
+                        <article class="tarjeta-proyecto" data-categoria="otros">
+                            <div class="tarjeta-proyecto__imagen-wrap">
+                                <div class="mini-carrusel" aria-label="Proceso del proyecto">
+                                    <div class="mini-carrusel__track">
+                                        <img
+                                            src="imagenes/marco-candelabro.jpg"
+                                            alt="Base de stand de conferencia"
+                                            class="tarjeta-proyecto__imagen mini-carrusel__slide activo"
+                                            loading="lazy"
+                                        />
+                                        <img src="imagenes/marco-candelabro-1.jpg" alt="Stand detallado" class="tarjeta-proyecto__imagen mini-carrusel__slide" loading="lazy" />
+                                    </div>
+
+                                    <button class="mini-carrusel__control mini-carrusel__control--prev" type="button" aria-label="Imagen anterior">‹</button>
+                                    <button class="mini-carrusel__control mini-carrusel__control--next" type="button" aria-label="Imagen siguiente">›</button>
+                                    <div class="mini-carrusel__dots" aria-label="Indicadores del carrusel"></div>
+                                </div>
+                            </div>
+                            <div class="tarjeta-proyecto__info">
+                                <span class="tarjeta-proyecto__categoria">Otros</span>
+                                <h2 class="tarjeta-proyecto__nombre">Marcos de adorno</h2>
+                                <p class="tarjeta-proyecto__descripcion">Proxima descripcion</p>
+                            </div>
+                        </article>
                     </div>
                     <p
                         class="sin-resultados"
@@ -628,7 +675,9 @@
         </footer>
 
         <div id="visorTarjeta" class="visor-tarjeta" aria-hidden="true">
+            <button class="visor-tarjeta__control visor-tarjeta__control--prev" type="button" aria-label="Imagen anterior">‹</button>
             <img id="visorTarjetaImg" class="visor-tarjeta__img" alt="" />
+            <button class="visor-tarjeta__control visor-tarjeta__control--next" type="button" aria-label="Imagen siguiente">›</button>
         </div>
 
         <script src="js/principal.js"></script>
